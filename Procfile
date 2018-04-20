@@ -1,1 +1,1 @@
-worker: node mimic_bot.js
+worker: node bot.js
