@@ -1,2 +1,2 @@
-# Discord.Mimicry-Bot
+# Discord-Mimicry-Bot
 A bot that mimics you until you pass it on...
