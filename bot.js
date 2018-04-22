@@ -14,7 +14,7 @@ client.on("message", (message) => {
 
   if (command === "Mimic") 
   {
-    message.channel.send("You are no longer being mimiced.");
+    message.channel.send("You are no longer being mimicked.");
   }
 });
 
