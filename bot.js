@@ -12,9 +12,9 @@ client.on("message", (message) => {
   var args = message.content.slice(prefix.length).trim().split(/ +/g);
   var command = args.shift().toLowerCase();
 
-  if (command === "Mimic") 
+  if (command === "mimic") 
   {
-    message.channel.send("You are no longer being mimicked.");
+    message.reply("You are no longer being mimicked.");
   }
 });
 
