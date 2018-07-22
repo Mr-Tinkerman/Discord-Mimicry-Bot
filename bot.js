@@ -12,10 +12,18 @@ client.on("message", (message) => {
   var args = message.content.slice(prefix.length).trim().split(/ +/g);
   var command = args.shift().toLowerCase();
 
-  if (command === "mimic") 
+  if (command === "ping") 
   {
-    message.reply("You are no longer being mimicked.");
-  }
+    message.channel.send("pong");
+  } 
+  else 
+    if (command === "clear")
+    {
+      if (message.member.hasPermission("MANAGE_MESSAGES")) 
+      {
+        message.channel.fetchMessages().then(function(list){message.channel.bulkDelete(list);}, function(err){message.channel.send("ERROR: ERROR CLEARING CHANNEL.")})                        
+      }
+    }
 });
 
 client.login(process.env.BOT_TOKEN);
